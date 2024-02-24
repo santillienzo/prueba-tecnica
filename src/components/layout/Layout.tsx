@@ -13,7 +13,7 @@ const Layout = ({children}:Props) => {
       <NavBar/>
       <div className={style.content}>
         <SideBar/>
-        <div className={style.children_wrapper}>
+        <div className={style.childrenWrapper}>
           {children}
         </div>
       </div>

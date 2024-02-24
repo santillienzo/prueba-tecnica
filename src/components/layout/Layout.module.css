@@ -6,6 +6,8 @@
     display: flex;
 }
 
-.children_wrapper{
-    padding-top: 100px;
+.childrenWrapper{
+    margin-top: 100px;
+    padding: 50px 25px;
+    flex: 1;
 }
