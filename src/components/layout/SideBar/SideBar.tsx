@@ -81,7 +81,7 @@ const LinkItem = ({title, icon, selected}: ILinkItem)=>{
 
 const SideBar = () => {
   return (
-    <div className={style.container}>
+    <nav className={style.sidebar}>
       <ul className={style.principalLinks}>
         {
           links.map((link, i) =>(
@@ -102,7 +102,7 @@ const SideBar = () => {
           ))
         }
       </ul>
-    </div>
+    </nav>
   )
 }
 

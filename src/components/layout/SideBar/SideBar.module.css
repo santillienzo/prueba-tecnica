@@ -1,4 +1,4 @@
-.container {
+.sidebar {
     background-color: #fff;
     width: 289px;
     height: 100vh;
@@ -42,10 +42,6 @@
 
 .linkItem:hover .linkText {
     border-bottom: 1px solid #EB4335;
-}
-
-.tabler-icon {
-    background-color: red;
 }
 
 .itemSelected .linkText{

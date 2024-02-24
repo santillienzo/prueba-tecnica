@@ -1,0 +1,82 @@
+.navbar{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border-bottom: 1px solid #0f0f0f;
+    display: flex;
+    align-items: center;
+}
+
+.logoContainer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 289px;
+}
+
+.userActionsContainer{
+    flex: 1;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding:  15px 30px;
+}
+
+.titlePage{
+    flex: 1;
+    font-size: 46px;
+}
+
+.userActionsIcons{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.actionsIcons{
+    display: flex;
+    align-items: center;
+    gap: 26px;
+}
+
+.actionsIcons span {
+    position: relative;
+    cursor: pointer;
+}
+
+.actionsIcons span::after{
+    content: '1';
+    color: #fff;
+    position: absolute;
+    top: -3px;
+    right: -3px;
+    font-size: 10px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red;
+}
+
+.userActionsLogo{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.userActionsLogo span:nth-child(1){
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 20px;
+}
+
+.userActionsLogo span:nth-child(2){
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 20px;
+
+}

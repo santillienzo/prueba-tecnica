@@ -1,7 +1,20 @@
+import style from './Layout.module.css'
+import NavBar from "./NavBar/NavBar"
+import SideBar from "./SideBar/SideBar"
+import { ReactNode } from "react";
+type Props = {
+  children: ReactNode;
+}
 
-const Layout = () => {
+const Layout = ({children}:Props) => {
+
+  console.log(children)
+
   return (
-    <div>Layout</div>
+    <div className={style.layout}>
+      <NavBar/>
+      <SideBar/>
+    </div>
   )
 }
 

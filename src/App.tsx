@@ -1,11 +1,13 @@
 import './App.css'
-import SideBar from './components/layout/SideBar/SideBar'
+import Layout from './components/layout/Layout'
 
 function App() {
 
   return (
     <>
-      <SideBar/>
+      <Layout>
+        Children
+      </Layout>
     </>
   )
 }
