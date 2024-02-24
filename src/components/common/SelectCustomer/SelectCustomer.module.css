@@ -1,0 +1,33 @@
+
+.selectCustomerContainer{
+    display: flex;
+    width: max-content;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.selectCustomer{
+    display: inline-block;
+    border: 1px solid #6848C8;
+    border-radius: 12px;
+    background-color: transparent;
+    padding: 3px 8px;
+    width: 200px;
+    color: #4285F4;
+}
+
+.deleteCustomerBtn{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: #CF0303;
+    border-radius: 50%;
+    border: none;
+}
+
+.selectCustomerContainer label{
+    font-family: 'Roboto', sans-serif;
+}

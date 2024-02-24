@@ -1,20 +1,12 @@
-import { IconX } from '@tabler/icons-react'
+import SelectCustomer from '../../common/SelectCustomer/SelectCustomer'
 import style from './RequestCard.module.css'
 
 const RequestCard = () => {
   return (
     <div className={style.cardContainer}>
       <h3 className={style.title}>Buscar cliente</h3>
-      <div className={style.selectCustomerContainer}>
-        <label htmlFor="selectCustomer">Seleccione un cliente MCC</label>
-        <select name="selectCustomer" id="selectCustomer" className={style.selectCustomer}>
-          <option value="1">Cliente MCC 1</option>
-          <option value="2">Joa</option>
-          <option value="3">Brend</option>
-          <option value="4">Tar</option>
-          <option value="5">Huguit</option>
-        </select>
-        <button className={style.deleteCustomerBtn}><IconX size={20}/></button>
+      <div className={style.selectCustomerWrapper}>
+        <SelectCustomer/>
       </div>
       <div className={style.clientDataContainer}>
         <h4 className={style.clientDataTitle}>Datos del cliente</h4>
