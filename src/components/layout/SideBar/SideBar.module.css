@@ -1,0 +1,54 @@
+.container {
+    background-color: #fff;
+    width: 289px;
+    height: 100vh;
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.principalLinks{
+    flex: 1
+}
+
+.otherLinks {
+    border-top: 1px solid #0f0f0f;
+}
+
+.linkItem {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    padding-left: 38px;
+    gap: 26px;
+    cursor: pointer;
+}
+
+.linkText{
+    width: 50%;
+
+}
+
+.linkItem:hover{
+    background-color: var(--background-color);
+    color: #EB4335;
+}
+
+.linkItem .linkIcon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.linkItem:hover .linkText {
+    border-bottom: 1px solid #EB4335;
+}
+
+.tabler-icon {
+    background-color: red;
+}
+
+.itemSelected .linkText{
+    color: #EB4335;
+    border-bottom: 1px solid #EB4335;
+}
