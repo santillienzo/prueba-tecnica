@@ -1,3 +1,11 @@
 .layout {
     position: relative;
 }
+
+.content{
+    display: flex;
+}
+
+.children_wrapper{
+    padding-top: 100px;
+}

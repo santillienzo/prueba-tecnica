@@ -8,12 +8,15 @@ type Props = {
 
 const Layout = ({children}:Props) => {
 
-  console.log(children)
-
   return (
     <div className={style.layout}>
       <NavBar/>
-      <SideBar/>
+      <div className={style.content}>
+        <SideBar/>
+        <div className={style.children_wrapper}>
+          {children}
+        </div>
+      </div>
     </div>
   )
 }
