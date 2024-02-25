@@ -2,8 +2,8 @@ import style from './NavBar.module.css'
 import logo from '../../../assets/logo.svg'
 import { IconBellFilled, IconMailFilled } from '@tabler/icons-react'
 
-const notificationValue = 1;
-const messageValue = 5;
+const messageValue = 1;
+const notificationValue = 4;
 
 const NavBar = () => {
 
