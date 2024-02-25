@@ -26,6 +26,12 @@
     background-color: #CF0303;
     border-radius: 50%;
     border: none;
+    transition: transform .2s ease;
+}
+
+.deleteCustomerBtn:hover{
+    transform: scale(1.1);
+    transition: transform .2s ease;
 }
 
 .selectCustomerContainer label{
