@@ -55,6 +55,7 @@ const SelectCustomer = ({handleCustomer}:Props) => {
     if(isLoading) return <Loader/>
 
     return (
+    <>
     <div className={style.selectCustomerContainer}>
         <label htmlFor="selectCustomer">Seleccione un cliente MCC</label>
         <div className={style.actions}>
@@ -75,6 +76,7 @@ const SelectCustomer = ({handleCustomer}:Props) => {
             <button className={style.deleteCustomerBtn} title='Borrar cliente' onClick={deleteCustomer}><IconX size={20}/></button>
         </div>
     </div>
+    </>
     )
 }
 

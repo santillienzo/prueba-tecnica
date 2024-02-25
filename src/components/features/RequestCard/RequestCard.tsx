@@ -4,6 +4,7 @@ import style from './RequestCard.module.css'
 import { Customer } from '../../../types/customers.types'
 import toast from 'react-hot-toast'
 import { IconAlertOctagon } from '@tabler/icons-react'
+import Button from '../../common/Button/Button'
 
 const RequestCard = () => {
   //Estado donde se almacenara el cliente seleccionado desde el select
@@ -64,7 +65,7 @@ const RequestCard = () => {
       }
         
       <div className={style.btnContainer}>
-        <button onClick={handleSubmit}>Confirmar</button>
+        <Button onClick={handleSubmit}>Confirmar</Button>
       </div>
     </div>
   )
