@@ -1,5 +1,5 @@
 import style from './NavBar.module.css'
-import { IconBellFilled, IconMailFilled } from '@tabler/icons-react'
+import { IconBellFilled, IconMailFilled, IconMenu2 } from '@tabler/icons-react'
 
 const messageValue = 1;
 const notificationValue = 4;
@@ -8,6 +8,10 @@ const NavBar = () => {
 
   return (
     <header className={style.navbar}>
+      {/* Este elemento solo se va a mostrar cuando nos encontremos en pantallas menores a 768px */}
+      <div className={style.toggleMenu}>
+        <IconMenu2/>
+      </div>
       <div className={style.userActionsContainer}>
         <h2 className={style.titlePage}>Sitios</h2>
         <div className={style.userActionsIcons}>
