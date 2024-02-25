@@ -40,7 +40,7 @@ const RequestCard = () => {
             </div>
           </div>
         ):(<div className={style.noCustomerAlert}>
-          <p>No hay cliente cargado</p>
+          <p>No hay cliente seleccionado</p>
         </div>)
       }
         
