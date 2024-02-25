@@ -68,3 +68,8 @@
 .btnContainer button:hover{
     background-color: #14a13c;
 }
+
+.noCustomerAlert{
+    text-align: center;
+    padding: 15px;
+}
