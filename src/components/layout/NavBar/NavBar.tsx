@@ -2,7 +2,11 @@ import style from './NavBar.module.css'
 import logo from '../../../assets/logo.svg'
 import { IconBellFilled, IconMailFilled } from '@tabler/icons-react'
 
+const notificationValue = 1;
+const messageValue = 5;
+
 const NavBar = () => {
+
   return (
     <header className={style.navbar}>
       <div className={style.logoContainer}>
@@ -14,11 +18,17 @@ const NavBar = () => {
           <div className={style.actionsIcons}>
             <span className={style.icon}>
               <IconMailFilled size={28}/>
-              <span className={style.badge}>2</span>
+              <span 
+                className={style.badge} 
+                style={{display: messageValue > 0 ? 'flex' : 'none'}
+              }>{messageValue}</span>
             </span>
             <span className={style.icon}>
               <IconBellFilled size={28}/>
-              <span className={style.badge}>3</span>
+              <span 
+                className={style.badge} 
+                style={{display: notificationValue > 0 ? 'flex' : 'none'}}
+              >{notificationValue}</span>
             </span>
           </div>
           <div className={style.userActionsLogo}>
