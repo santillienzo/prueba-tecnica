@@ -12,8 +12,14 @@ const NavBar = () => {
         <h2 className={style.titlePage}>Sitios</h2>
         <div className={style.userActionsIcons}>
           <div className={style.actionsIcons}>
-            <span><IconMailFilled size={28}/></span>
-            <span><IconBellFilled size={28}/></span>
+            <span className={style.icon}>
+              <IconMailFilled size={28}/>
+              <span className={style.badge}>2</span>
+            </span>
+            <span className={style.icon}>
+              <IconBellFilled size={28}/>
+              <span className={style.badge}>3</span>
+            </span>
           </div>
           <div className={style.userActionsLogo}>
             <span>User</span>
