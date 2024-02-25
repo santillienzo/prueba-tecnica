@@ -13,9 +13,9 @@ const useFetchCustomers = () => {
     fetchCustomers().then(response => setCustomers(response))
     .catch(response=> console.log(response))
     .finally(() => setIsLoading(false))
-  })
+  },[])
 
-  return {customers, isLoading}
+  return {customers, isLoading, setCustomers}
 }
 
 export default useFetchCustomers

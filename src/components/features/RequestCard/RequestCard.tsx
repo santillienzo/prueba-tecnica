@@ -10,6 +10,8 @@ const RequestCard = () => {
     setCustomer(customer)
   }
 
+  
+
   return (
     <div className={style.cardContainer}>
       <h3 className={style.title}>Buscar cliente</h3>
