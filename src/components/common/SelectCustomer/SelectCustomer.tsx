@@ -12,27 +12,38 @@ type Props = {
 }
 
 const SelectCustomer = ({handleCustomer}:Props) => {
+    //Hook personalizado para obtener nuestros clientes
     const { customers, isLoading, setCustomers } = useFetchCustomers()
+    //Estado donde se almacena el id del cliente seleccionado
     const [idCustomer, setIdCustomer] = useState<Customer['id'] | null>()
 
+    //Función para obtener el cliente seleccionado
     const handleChangeSelect = (event: ChangeEvent<HTMLSelectElement>)=>{
         const {value} = event.target;
+        //Buscamos por el 'value' del select al cliente seleccionado por su id
         const selectedCustomer = customers.find(customer => customer.id === Number(value))
         
-        
+        //Si el cliente existe se setea el id y se envia mediante el handleCustomer
         if (selectedCustomer) {
             setIdCustomer(selectedCustomer.id)
             handleCustomer(selectedCustomer)
         }
     }
 
+    //Función para eliminar el cliente seleccionado
     const deleteCustomer = ()=>{
+        //Si hay un cliente seleccionado se continua con la función
         if (idCustomer != null && idCustomer !== undefined) {
+            //Declaramos un nuevo array donde se filtran los clientes que tengan un valor distinto al del cliente seleccionado (es decir se elimina)
             const newCustomers = customers.filter(customer => customer.id !== idCustomer)
-    
+
+            //resetamos el id 
             setIdCustomer(null)
+            //Actualizamos nuestra lista de clientes
             setCustomers(newCustomers)
+            //Quitamos la selección de nuestro cliente
             handleCustomer(null)
+            //Enviamos una notificación
             toast("Eliminado correctamente", {
                 icon: <IconTrash color='#14a13c'/>
             })

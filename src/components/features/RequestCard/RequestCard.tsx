@@ -6,15 +6,21 @@ import toast from 'react-hot-toast'
 import { IconAlertOctagon } from '@tabler/icons-react'
 
 const RequestCard = () => {
+  //Estado donde se almacenara el cliente seleccionado desde el select
   const [customer, setCustomer] = useState<Customer | null>(null)
 
+  //Función para administrar el estado de 'customer'
   const handleCustomer = (customer: Customer | null) => {
     setCustomer(customer)
   }
 
+  //Función para ejecutar el evento submit de botón 'Confirmar'
   const handleSubmit = ()=>{
+
+    //Si hay un cliente seleccionado se notifica al usuario que se confirmó correctamente
     if (customer) {
       toast.success(`${customer.name} confirmado correctamente`)
+    //Si no se le informa que no hay cliente seleccionado
     }else {
       toast('No hay cliente seleccionado',{
         icon: <IconAlertOctagon color='#bbbb23'/>
@@ -26,6 +32,7 @@ const RequestCard = () => {
     <div className={style.cardContainer}>
       <h3 className={style.title}>Buscar cliente</h3>
       <div className={style.selectCustomerWrapper}>
+        {/* Componente selector */}
         <SelectCustomer handleCustomer={handleCustomer}/>
       </div>
       {

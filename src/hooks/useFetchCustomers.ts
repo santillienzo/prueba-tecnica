@@ -15,6 +15,7 @@ const useFetchCustomers = () => {
     .finally(() => setIsLoading(false))
   },[])
 
+  //Retornamos los datos necesarios
   return {customers, isLoading, setCustomers}
 }
 
