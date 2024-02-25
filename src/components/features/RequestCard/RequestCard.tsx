@@ -14,7 +14,7 @@ const RequestCard = () => {
 
   const handleSubmit = ()=>{
     if (customer) {
-      toast.success(`${customer.name} enviado correctamente`)
+      toast.success(`${customer.name} confirmado correctamente`)
     }else {
       toast('No hay cliente seleccionado',{
         icon: <IconAlertOctagon color='#bbbb23'/>
