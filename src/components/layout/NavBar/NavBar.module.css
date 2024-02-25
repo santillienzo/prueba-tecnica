@@ -81,4 +81,8 @@
     .userActionsContainer{
         margin: 0;
     }
+
+    .userActionsLogo{
+        display: none;
+    }
 }
