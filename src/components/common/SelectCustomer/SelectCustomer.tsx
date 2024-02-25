@@ -2,8 +2,9 @@ import { ChangeEvent, useState } from 'react'
 import useFetchCustomers from '../../../hooks/useFetchCustomers'
 import Loader from '../Loader/Loader'
 import style from './SelectCustomer.module.css'
-import { IconX } from '@tabler/icons-react'
+import { IconTrash, IconX } from '@tabler/icons-react'
 import { Customer } from '../../../types/customers.types'
+import toast from 'react-hot-toast'
 
 
 type Props = {
@@ -26,11 +27,16 @@ const SelectCustomer = ({handleCustomer}:Props) => {
     }
 
     const deleteCustomer = ()=>{
-        const newCustomers = customers.filter(customer => customer.id !== idCustomer)
-
-        setIdCustomer(0)
-        setCustomers(newCustomers)
-        handleCustomer(null)
+        if (idCustomer != null && idCustomer !== undefined) {
+            const newCustomers = customers.filter(customer => customer.id !== idCustomer)
+    
+            setIdCustomer(null)
+            setCustomers(newCustomers)
+            handleCustomer(null)
+            toast("Eliminado correctamente", {
+                icon: <IconTrash color='#14a13c'/>
+            })
+        }
     }
 
 
@@ -41,7 +47,7 @@ const SelectCustomer = ({handleCustomer}:Props) => {
     <div className={style.selectCustomerContainer}>
         <label htmlFor="selectCustomer">Seleccione un cliente MCC</label>
         <select
-            value={idCustomer?.toString()}
+            value={idCustomer || ""}
             name="selectCustomer" 
             id="selectCustomer" 
             className={style.selectCustomer} 

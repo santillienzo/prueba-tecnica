@@ -2,6 +2,8 @@ import { useState } from 'react'
 import SelectCustomer from '../../common/SelectCustomer/SelectCustomer'
 import style from './RequestCard.module.css'
 import { Customer } from '../../../types/customers.types'
+import toast from 'react-hot-toast'
+import { IconAlertOctagon } from '@tabler/icons-react'
 
 const RequestCard = () => {
   const [customer, setCustomer] = useState<Customer | null>(null)
@@ -10,7 +12,15 @@ const RequestCard = () => {
     setCustomer(customer)
   }
 
-  
+  const handleSubmit = ()=>{
+    if (customer) {
+      toast.success(`${customer.name} enviado correctamente`)
+    }else {
+      toast('No hay cliente seleccionado',{
+        icon: <IconAlertOctagon color='#bbbb23'/>
+      })
+    }
+  }
 
   return (
     <div className={style.cardContainer}>
@@ -47,7 +57,7 @@ const RequestCard = () => {
       }
         
       <div className={style.btnContainer}>
-        <button>Confirmar</button>
+        <button onClick={handleSubmit}>Confirmar</button>
       </div>
     </div>
   )
