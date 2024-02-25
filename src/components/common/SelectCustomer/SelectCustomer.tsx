@@ -57,21 +57,23 @@ const SelectCustomer = ({handleCustomer}:Props) => {
     return (
     <div className={style.selectCustomerContainer}>
         <label htmlFor="selectCustomer">Seleccione un cliente MCC</label>
-        <select
-            value={idCustomer || ""}
-            name="selectCustomer" 
-            id="selectCustomer" 
-            className={style.selectCustomer} 
-            onChange={handleChangeSelect}
-        >
-            <option value="">Clientes</option>
-            {
-                customers.map((customer,i)=>(
-                    <option key={i} value={customer.id}>{customer.name}</option>
-                ))
-            }
-        </select>
-        <button className={style.deleteCustomerBtn} title='Borrar cliente' onClick={deleteCustomer}><IconX size={20}/></button>
+        <div className={style.actions}>
+            <select
+                value={idCustomer || ""}
+                name="selectCustomer" 
+                id="selectCustomer" 
+                className={style.selectCustomer} 
+                onChange={handleChangeSelect}
+            >
+                <option value="">Clientes</option>
+                {
+                    customers.map((customer,i)=>(
+                        <option key={i} value={customer.id}>{customer.name}</option>
+                    ))
+                }
+            </select>
+            <button className={style.deleteCustomerBtn} title='Borrar cliente' onClick={deleteCustomer}><IconX size={20}/></button>
+        </div>
     </div>
     )
 }

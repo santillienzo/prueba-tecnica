@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .clientDataContainer{
@@ -28,6 +29,7 @@
 
 .clientDataTable{
     display: flex;
+    flex-wrap: wrap;
     gap: 25px;
     justify-content: spac;
 }
