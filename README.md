@@ -1,8 +1,15 @@
 # React + TypeScript + Vite
 
-Para ejecutar este proyecto escriba en consola:
+Para utilizar este proyecto utilice los siguientes comandos:
+
+## Instalar las dependencias
 
 ```
 npm install
+```
+
+## Ejecutar proyecto en localhost:5173
+
+```
 npm run dev
 ```
