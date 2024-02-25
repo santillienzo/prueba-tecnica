@@ -2,10 +2,19 @@
     background-color: #fff;
     width: 289px;
     height: 100vh;
-    padding-top: 100px;
     display: flex;
     flex-direction: column;
 }
+
+.logoContainer{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    width: 100%;
+}
+
 
 .principalLinks{
     flex: 1
@@ -49,8 +58,8 @@
     border-bottom: 1px solid #EB4335;
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .sidebar{
         display: none;
     }
-} */
+}

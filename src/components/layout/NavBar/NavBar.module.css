@@ -6,22 +6,13 @@
     border-bottom: 1px solid #0f0f0f;
     display: flex;
     align-items: center;
-
 }
-
-.logoContainer{
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 289px;
-}
-
 .userActionsContainer{
     flex: 1;
     font-weight: 600;
     display: flex;
     align-items: center;
+    margin-left: 289px;
     padding:  15px 30px;
 }
 
@@ -84,5 +75,10 @@
     font-weight: 300;
     font-size: 20px;
     line-height: 20px;
+}
 
+@media (max-width: 768px) {
+    .userActionsContainer{
+        margin: 0;
+    }
 }

@@ -1,5 +1,7 @@
 import { IconArchive, IconBorderAll, IconBuilding, IconCalendarMonth, IconChartPie, IconCreditCard, IconMoon, IconPhone, IconSearch, IconSettings, IconUserCircle } from '@tabler/icons-react'
 import style from './SideBar.module.css'
+import logo from '../../../assets/logo.svg'
+
 
 interface ILinkItem {
   title: string;
@@ -82,6 +84,9 @@ const LinkItem = ({title, icon, selected}: ILinkItem)=>{
 const SideBar = () => {
   return (
     <nav className={style.sidebar}>
+      <div className={style.logoContainer}>
+        <img src={logo} alt="logo" className={style.logo} />
+      </div>
       <ul className={style.principalLinks}>
         {
           links.map((link, i) =>(
