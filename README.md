@@ -1,4 +1,4 @@
-# React + TypeScript + Vite
+# Prueba técnica Tehuentec
 
 ## Descripción
 Maquetación de distintas funciones y consumo de API (https://jsonplaceholder.typicode.com) de dashboard para prueba técnica de Tehuentec
