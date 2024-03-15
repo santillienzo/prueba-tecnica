@@ -1,7 +1,7 @@
-# Prueba técnica Tehuentec
+# Prueba técnica
 
 ## Descripción
-Maquetación de distintas funciones y consumo de API (https://jsonplaceholder.typicode.com) de dashboard para prueba técnica de Tehuentec
+Maquetación de distintas funciones y consumo de API (https://jsonplaceholder.typicode.com) de dashboard para prueba técnica
 
 ## Características
 * Consumo de API para obtener datos.
